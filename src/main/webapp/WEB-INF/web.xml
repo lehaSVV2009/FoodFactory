@@ -1,0 +1,41 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>Archetype Created Web Application</display-name>
+
+
+    <servlet>
+        <servlet-name>DishesRecipesServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.DishesRecipesServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MostLowCalorieDishServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.MostLowCalorieDishServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PriceListServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.PriceListServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>DishesRecipesServlet</servlet-name>
+        <url-pattern>/showDishesRecipes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MostLowCalorieDishServlet</servlet-name>
+        <url-pattern>/showMostLowCalorieDish</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PriceListServlet</servlet-name>
+        <url-pattern>/showPriceList</url-pattern>
+    </servlet-mapping>
+
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

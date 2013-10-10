@@ -1,0 +1,21 @@
+package com.kadet.foodFactory.model;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: Кадет
+ * Date: 10.10.13
+ * Time: 23:19
+ * To change this template use File | Settings | File Templates.
+ */
+public class Dish {
+
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
