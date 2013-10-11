@@ -1,6 +1,9 @@
 package com.kadet.foodFactory.controller;
 
-import com.kadet.foodFactory.model.Recipe;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,25 +12,25 @@ import com.kadet.foodFactory.model.Recipe;
  * Time: 22:53
  * To change this template use File | Settings | File Templates.
  */
-public class RecipeController extends AbstractController implements Editable<Recipe>{
+public class RecipeController extends AbstractController implements EditingController {
 
     @Override
-    public boolean add(Recipe element) {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    public void add(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
-    public boolean remove(Recipe element) {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    public void remove(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
-    public Recipe get(int id) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public void get(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
-    public boolean update(int id, Recipe element) {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    public void update(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 }

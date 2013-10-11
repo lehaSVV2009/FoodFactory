@@ -1,4 +1,4 @@
-package com.kadet.foodFactory.servlets;
+package com.kadet.foodFactory.servlets.showServlets;
 
 import com.kadet.foodFactory.controller.ShowController;
 
@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
 /**
@@ -17,14 +16,14 @@ import java.io.UnsupportedEncodingException;
  * Time: 3:39
  * To change this template use File | Settings | File Templates.
  */
-public class DishesRecipesServlet extends HttpServlet{
+public class PriceListServlet extends HttpServlet{
 
     private ShowController controller = ShowController.getInstance();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            controller.showDishesRecipes(request, response);
+            controller.showPriceList(request, response);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (IOException e) {

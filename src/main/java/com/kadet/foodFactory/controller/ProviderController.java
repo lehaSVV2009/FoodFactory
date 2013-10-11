@@ -1,6 +1,9 @@
 package com.kadet.foodFactory.controller;
 
-import com.kadet.foodFactory.model.Provider;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,25 +12,25 @@ import com.kadet.foodFactory.model.Provider;
  * Time: 22:54
  * To change this template use File | Settings | File Templates.
  */
-public class ProviderController extends AbstractController implements Editable<Provider>{
+public class ProviderController extends AbstractController implements EditingController {
 
     @Override
-    public boolean add(Provider element) {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    public void add(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
-    public boolean remove(Provider element) {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    public void remove(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
-    public Provider get(int id) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public void get(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
-    public boolean update(int id, Provider element) {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    public void update(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 }

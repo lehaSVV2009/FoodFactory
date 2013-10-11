@@ -6,20 +6,82 @@
     <display-name>Archetype Created Web Application</display-name>
 
 
+    <!--in index.jsp-->
     <servlet>
         <servlet-name>DishesRecipesServlet</servlet-name>
-        <servlet-class>com.kadet.foodFactory.servlets.DishesRecipesServlet</servlet-class>
+        <servlet-class>com.kadet.foodFactory.servlets.showServlets.DishesRecipesServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>MostLowCalorieDishServlet</servlet-name>
-        <servlet-class>com.kadet.foodFactory.servlets.MostLowCalorieDishServlet</servlet-class>
+        <servlet-class>com.kadet.foodFactory.servlets.showServlets.MostLowCalorieDishServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>PriceListServlet</servlet-name>
-        <servlet-class>com.kadet.foodFactory.servlets.PriceListServlet</servlet-class>
+        <servlet-class>com.kadet.foodFactory.servlets.showServlets.PriceListServlet</servlet-class>
+    </servlet>
+
+    <!--in product.jsp-->
+    <servlet>
+        <servlet-name>AddProductServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.productServlets.AddProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetProductServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.productServlets.GetProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RemoveProductServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.productServlets.RemoveProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateProductServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.productServlets.UpdateProductServlet</servlet-class>
     </servlet>
 
 
+    <!--in provider.jsp-->
+    <servlet>
+        <servlet-name>AddProviderServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.providerServlets.AddProviderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetProviderServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.providerServlets.GetProviderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RemoveProviderServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.providerServlets.RemoveProviderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateProviderServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.providerServlets.UpdateProviderServlet</servlet-class>
+    </servlet>
+
+
+    <!--in recipe.jsp-->
+    <servlet>
+        <servlet-name>AddRecipeServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.recipeServlets.AddRecipeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetRecipeServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.recipeServlets.GetRecipeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RemoveRecipeServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.recipeServlets.RemoveRecipeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateRecipeServlet</servlet-name>
+        <servlet-class>com.kadet.foodFactory.servlets.recipeServlets.UpdateRecipeServlet</servlet-class>
+    </servlet>
+
+
+
+
+    <!--mapping-->
+
+    <!--in index.jsp-->
     <servlet-mapping>
         <servlet-name>DishesRecipesServlet</servlet-name>
         <url-pattern>/showDishesRecipes</url-pattern>
@@ -31,6 +93,62 @@
     <servlet-mapping>
         <servlet-name>PriceListServlet</servlet-name>
         <url-pattern>/showPriceList</url-pattern>
+    </servlet-mapping>
+
+    <!--in product.jsp-->
+    <servlet-mapping>
+        <servlet-name>AddProductServlet</servlet-name>
+        <url-pattern>/addProduct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetProductServlet</servlet-name>
+        <url-pattern>/getProduct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoveProductServlet</servlet-name>
+        <url-pattern>/removeProduct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateProductServlet</servlet-name>
+        <url-pattern>/updateProduct</url-pattern>
+    </servlet-mapping>
+
+
+    <!--in provider.jsp-->
+    <servlet-mapping>
+        <servlet-name>AddProviderServlet</servlet-name>
+        <url-pattern>/addProvider</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetProviderServlet</servlet-name>
+        <url-pattern>/getProvider</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoveProviderServlet</servlet-name>
+        <url-pattern>/removeProvider</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateProviderServlet</servlet-name>
+        <url-pattern>/updateProvider</url-pattern>
+    </servlet-mapping>
+
+
+    <!--in recipe.jsp-->
+    <servlet-mapping>
+        <servlet-name>AddRecipeServlet</servlet-name>
+        <url-pattern>/addRecipe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetRecipeServlet</servlet-name>
+        <url-pattern>/getRecipe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoveRecipeServlet</servlet-name>
+        <url-pattern>/removeRecipe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateRecipeServlet</servlet-name>
+        <url-pattern>/updateRecipe</url-pattern>
     </servlet-mapping>
 
 
