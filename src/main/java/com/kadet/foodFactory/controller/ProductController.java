@@ -1,5 +1,7 @@
 package com.kadet.foodFactory.controller;
 
+import com.kadet.foodFactory.util.DataStrings;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,21 +18,21 @@ public class ProductController extends AbstractController implements EditingCont
 
     @Override
     public void add(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        redirectToJsp(request, response, DataStrings.PRODUCT_PATH);
     }
 
     @Override
     public void remove(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        redirectToJsp(request, response, DataStrings.PRODUCT_PATH);
     }
 
     @Override
     public void get(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        redirectToJsp(request, response, DataStrings.PRODUCT_PATH);
     }
 
     @Override
     public void update(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        redirectToJsp(request, response, DataStrings.PRODUCT_PATH);
     }
 }
