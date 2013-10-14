@@ -1,4 +1,4 @@
-package com.kadet.foodFactory.model;
+package com.kadet.foodFactory.entity;
 
 /**
  * Created with IntelliJ IDEA.
