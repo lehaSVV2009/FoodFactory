@@ -9,7 +9,5 @@ package com.kadet.foodFactory.entity;
  */
 public interface Entity {
 
-    public void setId ();
-    public int getId ();
 
 }
