@@ -7,7 +7,7 @@ package com.kadet.foodFactory.entity;
  * Time: 1:15
  * To change this template use File | Settings | File Templates.
  */
-public class Product implements Entity{
+public class Product implements Entity {
 
     private Integer idProduct;
     private String name;

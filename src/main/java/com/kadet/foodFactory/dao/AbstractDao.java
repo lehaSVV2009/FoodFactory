@@ -17,7 +17,7 @@ public interface AbstractDao <E extends Entity> {
     E findByEntity (E entity);
     int save (E entity);
     int update (E entity);
-    int delete (Object id);
+    int delete (E entity);
     List<E> findAll ();
 
 }

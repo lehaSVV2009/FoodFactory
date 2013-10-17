@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `foodFactory`.`Author` (
   `surname` VARCHAR(45) NOT NULL,
   `name` VARCHAR(45) NULL,
   `country` VARCHAR(45) NULL,
-  `year` YEAR NULL,
+  `year` INT NULL,
   PRIMARY KEY (`idAuthor`))
 DEFAULT CHARACTER SET=cp1251,
 ENGINE = InnoDB;
@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `foodFactory`.`Ingredient` (
   `idIngredient` INT NOT NULL,
   `Provider_id` INT NOT NULL,
   `name` VARCHAR(45) NOT NULL,
-  `caloriesNumPerGram` VARCHAR(45) NULL,
+  `caloriesNumPerGram` INT NULL,
   PRIMARY KEY (`idIngredient`, `Provider_id`))
 DEFAULT CHARACTER SET=cp1251,
 ENGINE = InnoDB;

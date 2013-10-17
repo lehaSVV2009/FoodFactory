@@ -39,23 +39,18 @@ public class ProductDaoImpl extends AbstractDaoImpl<Product> implements ProductD
     }
 
     @Override
-    protected String getIdColumnName() {
-        return COLUMN_NAMES[ID_COLUMN];
-    }
-
-    @Override
     protected Integer getIdColumnNum() {
         return ID_COLUMN;
     }
 
     @Override
-    protected Class getIdColumnType() {
-        return COLUMN_TYPES[ID_COLUMN];
+    protected Class[] getColumnTypes() {
+        return COLUMN_TYPES;
     }
 
     @Override
-    protected Class[] getColumnTypes() {
-        return COLUMN_TYPES;
+    protected Product createInstance() {
+        return new Product();
     }
 
     @Override
@@ -65,7 +60,19 @@ public class ProductDaoImpl extends AbstractDaoImpl<Product> implements ProductD
             case 1 : return entity.getName();
             case 2 : return entity.getProductGroup_Id();
         }
-        return new Object();
+        return null;
+    }
+
+    @Override
+    protected void setEntityColumn(Product entity, int columnNum, Object value) {
+        switch (columnNum) {
+            case 0 : entity.setIdProduct((Integer) value);
+                return;
+            case 1 : entity.setName((String) value);
+                return;
+            case 2 : entity.setProductGroup_Id((Integer) value);
+                return;
+        }
     }
 
 }

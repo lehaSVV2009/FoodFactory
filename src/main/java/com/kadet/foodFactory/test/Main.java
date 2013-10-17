@@ -1,8 +1,8 @@
 package com.kadet.foodFactory.test;
 
-import com.kadet.foodFactory.dao.ProductDao;
-import com.kadet.foodFactory.dao.daoImpl.ProductDaoImpl;
-import com.kadet.foodFactory.entity.Product;
+import com.kadet.foodFactory.dao.RecipeDao;
+import com.kadet.foodFactory.dao.daoImpl.RecipeDaoImpl;
+import com.kadet.foodFactory.entity.Recipe;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,61 +15,31 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ProductDao productDao = new ProductDaoImpl();
-        Product product = new Product();
-        product.setIdProduct(1);
-        product.setName("name1");
-        product.setProductGroup_Id(1);
-//        System.out.println(productDao.save(product));
-        product.setName("name1");
-        product.setProductGroup_Id(1);
-        System.out.println(productDao.update(product));
-        System.out.println(productDao.findAll());
-        System.out.println(productDao.findByEntity(new Product()));
-        System.out.println(productDao.findById(new Product()));
+        RecipeDao productGroupDao = new RecipeDaoImpl();
+        Recipe productGroup = new Recipe();
+        productGroup.setIdRecipe(1);
+        productGroup.setName("name1");
+        productGroup.setNumber("num1");
+        productGroup.setDescription("desc1");
+        productGroup.setProduct_id(2);
+        Recipe productGroup2 = new Recipe();
+        productGroup2.setIdRecipe(2);
+        productGroup2.setName("name2");
+        productGroup2.setNumber("num2");
+        productGroup2.setDescription("desc2");
+        productGroup2.setProduct_id(2);
+        System.out.println(productGroupDao.save(productGroup));
+        System.out.println(productGroupDao.save(productGroup2));
 
+        System.out.println(productGroupDao.findAll());
 
+        System.out.println(productGroupDao.findById(1));
 
-        /*System.out.println("-------- MySQL JDBC Connection Testing ------------");
+        Recipe productGroupCopy = new Recipe();
+        productGroupCopy.setIdRecipe(2);
+        System.out.println(productGroupDao.findByEntity(productGroupCopy));
 
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            System.out.println("Where is your MySQL JDBC Driver?");
-            e.printStackTrace();
-            return;
-        }
-
-        System.out.println("MySQL JDBC Driver Registered!");
-        Connection connection = null;
-        Statement statement = null;
-
-        try {
-            connection = DriverManager
-                    .getConnection("jdbc:mysql://localhost:3306/foodFactory", "root", "root");
-
-            statement = connection.createStatement();
-
-            statement.executeUpdate("insert into Provider values (1, \"01232\", \"name1\", \"address1\", \"123121\");");
-
-
-
-        } catch (SQLException e) {
-            System.out.println("Connection Failed! Check output console");
-            e.printStackTrace();
-            return;
-        }
-
-
-
-
-        if (connection != null) {
-            System.out.println("You made it, take control your database now!");
-        } else {
-            System.out.println("Failed to make connection!");
-        }*/
-
-
+        System.out.println(productGroupDao.delete(productGroup));
 
     }
 
