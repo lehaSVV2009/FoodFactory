@@ -54,4 +54,15 @@ public class Recipe implements Entity {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return "Recipe{" +
+                "idRecipe=" + idRecipe +
+                ", Product_id=" + Product_id +
+                ", number='" + number + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

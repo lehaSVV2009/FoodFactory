@@ -1,19 +1,18 @@
-package com.kadet.foodFactory.dao;
+package com.kadet.foodFactory.service;
 
 import com.kadet.foodFactory.entity.Product;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
  * User: Кадет
- * Date: 15.10.13
- * Time: 12:53
+ * Date: 21.10.13
+ * Time: 2:18
  * To change this template use File | Settings | File Templates.
  */
-public interface ProductDao extends AbstractDao<Product> {
+public interface ProductService {
 
     public List<Product> findAllWithRecipes ();
     public Map<Product, Integer> findMostLowCalorie (int productsNumber);

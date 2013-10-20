@@ -1,5 +1,10 @@
 package com.kadet.foodFactory.controller;
 
+import com.kadet.foodFactory.entity.Product;
+import com.kadet.foodFactory.service.BillService;
+import com.kadet.foodFactory.service.ProductService;
+import com.kadet.foodFactory.service.impl.BillServiceImpl;
+import com.kadet.foodFactory.service.impl.ProductServiceImpl;
 import com.kadet.foodFactory.util.DateConverter;
 
 import javax.servlet.ServletException;
@@ -8,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,6 +27,11 @@ public class ShowController extends AbstractController {
 
     private static ShowController controller;
 
+    private ProductService productService = new ProductServiceImpl();
+    private BillService billService = new BillServiceImpl();
+
+    public static final String PRODUCTS_PARAM = "PRODUCTS_WITH_RECIPES";
+
     public static ShowController getInstance () {
         if (controller == null) {
             controller = new ShowController();
@@ -30,6 +41,8 @@ public class ShowController extends AbstractController {
 
     public void showDishesRecipes(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
+        List<Product> productsWithRecipes = productService.findAllWithRecipes();
+        request.setAttribute(PRODUCTS_PARAM, productsWithRecipes);
         redirectToJsp(request, response, "showDishesRecipes.jsp");
     }
 

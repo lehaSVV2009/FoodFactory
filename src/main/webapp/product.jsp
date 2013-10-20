@@ -1,4 +1,4 @@
-<%@page language="java" contentType="text/html; ISO-8859-1" %>
+<%@page language="java" contentType="text/html; charset=utf-8" %>
 <html>
 <head>
 

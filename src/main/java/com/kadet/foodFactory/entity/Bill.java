@@ -19,6 +19,9 @@ public class Bill implements Entity {
     private Integer Provider_id;
     private Integer Ingredient_id;
 
+    private Provider provider;
+    private Ingredient ingredient;
+
     public Integer getIdBill() {
         return idBill;
     }
@@ -58,4 +61,21 @@ public class Bill implements Entity {
     public void setIngredient_id(Integer ingredient_id) {
         Ingredient_id = ingredient_id;
     }
+
+    public Provider getProvider() {
+        return provider;
+    }
+
+    public void setProvider(Provider provider) {
+        this.provider = provider;
+    }
+
+    public Ingredient getIngredient() {
+        return ingredient;
+    }
+
+    public void setIngredient(Ingredient ingredient) {
+        this.ingredient = ingredient;
+    }
 }
+

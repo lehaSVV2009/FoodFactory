@@ -102,7 +102,6 @@ DROP TABLE IF EXISTS `foodFactory`.`Ingredient` ;
 
 CREATE TABLE IF NOT EXISTS `foodFactory`.`Ingredient` (
   `idIngredient` INT NOT NULL,
-  `Provider_id` INT NOT NULL,
   `name` VARCHAR(45) NOT NULL,
   `caloriesNumPerGram` INT NULL,
   PRIMARY KEY (`idIngredient`, `Provider_id`))

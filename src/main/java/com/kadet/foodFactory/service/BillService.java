@@ -1,4 +1,4 @@
-package com.kadet.foodFactory.dao;
+package com.kadet.foodFactory.service;
 
 import com.kadet.foodFactory.entity.Bill;
 import com.kadet.foodFactory.entity.Provider;
@@ -9,12 +9,12 @@ import java.util.List;
 /**
  * Created with IntelliJ IDEA.
  * User: Кадет
- * Date: 17.10.13
- * Time: 3:19
+ * Date: 21.10.13
+ * Time: 2:21
  * To change this template use File | Settings | File Templates.
  */
-public interface BillDao extends AbstractDao<Bill> {
+public interface BillService {
 
-    public List<Bill> getPriceList (Provider provider, Date today);
+    public List<Bill> getPriceList(Provider provider, Date today);
 
 }

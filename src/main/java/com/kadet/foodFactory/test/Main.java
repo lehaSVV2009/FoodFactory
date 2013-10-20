@@ -1,8 +1,21 @@
 package com.kadet.foodFactory.test;
 
+import com.kadet.foodFactory.dao.BillDao;
+import com.kadet.foodFactory.dao.ProductDao;
+import com.kadet.foodFactory.dao.ProviderDao;
 import com.kadet.foodFactory.dao.RecipeDao;
+import com.kadet.foodFactory.dao.daoImpl.BillDaoImpl;
+import com.kadet.foodFactory.dao.daoImpl.ProductDaoImpl;
+import com.kadet.foodFactory.dao.daoImpl.ProviderDaoImpl;
 import com.kadet.foodFactory.dao.daoImpl.RecipeDaoImpl;
+import com.kadet.foodFactory.entity.Bill;
+import com.kadet.foodFactory.entity.Product;
+import com.kadet.foodFactory.entity.Provider;
 import com.kadet.foodFactory.entity.Recipe;
+
+import java.sql.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,7 +28,40 @@ public class Main {
 
     public static void main(String[] args) {
 
-        RecipeDao productGroupDao = new RecipeDaoImpl();
+        ProductDao productDao = new ProductDaoImpl();
+        List<Product> products = productDao.findAllWithRecipes();
+        for (Product product : products) {
+            System.out.println(product.getIdProduct());
+            System.out.println(product.getProductGroup_Id());
+            System.out.println(product.getName());
+            System.out.println(product.getRecipes());
+        }
+
+        Map<Product, Integer> map = productDao.findMostLowCalorie(5);
+        for (Product key : map.keySet()) {
+            System.out.println("product: " + key.getName() + "\ncalories: " + map.get(key));
+        }
+
+        ProviderDao providerDao = new ProviderDaoImpl();
+        BillDao billDao = new BillDaoImpl();
+        List<Provider> providers = providerDao.findAll();
+        for (Provider provider : providers) {
+            List<Bill> priceList = billDao.getPriceList(provider, new Date(System.currentTimeMillis()));
+            for (Bill bill : priceList) {
+                System.out.println("Bill{" +
+                        "idBill=" + bill.getIdBill() +
+                        ", price=" + bill.getPrice() +
+                        ", receiptDate=" + bill.getReceiptDate() +
+                        ", provider=" + bill.getProvider().getName() +
+                        ", provider=" + bill.getProvider().getCode() +
+                        ", provider=" + bill.getProvider().getAddress() +
+                        ", provider=" + bill.getProvider().getPhone() +
+                        ", provider=" + bill.getProvider().getIdProvider() +
+                        ", ingredient=" + bill.getIngredient().getName() +
+                        '}');
+            }
+        }
+        /*RecipeDao productGroupDao = new RecipeDaoImpl();
         Recipe productGroup = new Recipe();
         productGroup.setIdRecipe(1);
         productGroup.setName("name1");
@@ -40,7 +86,6 @@ public class Main {
         System.out.println(productGroupDao.findByEntity(productGroupCopy));
 
         System.out.println(productGroupDao.delete(productGroup));
-
-    }
+*/    }
 
 }

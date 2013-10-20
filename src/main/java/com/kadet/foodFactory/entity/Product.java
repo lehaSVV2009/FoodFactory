@@ -1,5 +1,8 @@
 package com.kadet.foodFactory.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Кадет
@@ -12,6 +15,11 @@ public class Product implements Entity {
     private Integer idProduct;
     private String name;
     private Integer ProductGroup_Id;
+    private List<Recipe> recipes;
+
+    public Product () {
+        this.recipes = new ArrayList<Recipe>();
+    }
 
     public Integer getIdProduct() {
         return idProduct;
@@ -35,6 +43,14 @@ public class Product implements Entity {
 
     public void setProductGroup_Id(Integer productGroup_Id) {
         this.ProductGroup_Id = productGroup_Id;
+    }
+
+    public List<Recipe> getRecipes() {
+        return recipes;
+    }
+
+    public void setRecipes(List<Recipe> recipes) {
+        this.recipes = recipes;
     }
 
     @Override
