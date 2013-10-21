@@ -1,6 +1,6 @@
 package com.kadet.foodFactory.util;
 
-import java.util.Date;
+import java.sql.Date;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,7 +12,7 @@ import java.util.Date;
 public final class DateConverter {
 
     public static Date stringToDate (String dateString) {
-        Date date = new Date();
+        Date date = new Date(System.currentTimeMillis());
         //  TODO: string to date
         return date;
     }
