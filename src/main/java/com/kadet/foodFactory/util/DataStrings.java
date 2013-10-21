@@ -13,7 +13,7 @@ public final class DataStrings {
 
     public final static String PRODUCT_PATH = "product.jsp";
     public final static String INDEX_PATH = "index.jsp";
-    public final static String PROVIDE_PATH = "provider.jsp";
+    public final static String PROVIDER_PATH = "provider.jsp";
     public final static String RECIPE_PATH = "recipe.jsp";
 
 }

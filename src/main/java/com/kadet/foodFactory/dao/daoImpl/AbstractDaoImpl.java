@@ -275,7 +275,6 @@ public abstract class AbstractDaoImpl<E extends Entity> implements AbstractDao<E
         return getColumnNames()[getIdColumnNum()];
     }
 
-
     abstract protected String getTableName ();
 
     abstract protected String[] getColumnNames ();

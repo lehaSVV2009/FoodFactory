@@ -20,5 +20,4 @@ public interface EditingController {
     void remove (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException;
     void get (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException;
     void update (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException;
-
 }
